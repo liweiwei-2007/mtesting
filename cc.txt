@@ -1,0 +1,62 @@
+reen Target Display device initialized
+[drm] width 1280
+[drm] height 768
+[drm] bpp 32
+[drm] Fifo max 0x00040000 min 0x00001000 cap 0x0000077f
+[drm] Using command buffers with DMA pool.
+[drm] DX: no.
+fbcon: svgadrmfb (fb0) is primary device
+Console: switching to colour frame buffer device 160x48
+[drm] Initialized vmwgfx 2.9.0 20150810 for 0000:00:0f.0 on minor 0
+dracut: Starting plymouth daemon
+dracut: rd_NO_DM: removing DM RAID activation
+dracut: rd_NO_MD: removing MD RAID activation
+usb 2-1: new full speed USB device number 2 using uhci_hcd
+ata_piix 0000:00:07.1: version 2.13
+scsi0 : ata_piix
+scsi1 : ata_piix
+ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0x1060 irq 14
+ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0x1068 irq 15
+Refined TSC clocksource calibration: 2712.197 MHz.
+Switching to clocksource tsc
+ata1.00: ATAPI: VMware Virtual IDE CDROM Drive, 00000001, max UDMA/33
+ata1.00: configured for UDMA/33
+scsi 0:0:0:0: CD-ROM            NECVMWar VMware IDE CDR00 1.00 PQ: 0 ANSI: 5
+ata2.00: ATAPI: VMware Virtual IDE CDROM Drive, 00000001, max UDMA/33
+ata2.00: configured for UDMA/33
+scsi 1:0:0:0: CD-ROM            NECVMWar VMware IDE CDR10 1.00 PQ: 0 ANSI: 5
+Fusion MPT base driver 3.04.20
+Copyright (c) 1999-2008 LSI Corporation
+Fusion MPT SPI Host driver 3.04.20
+mptspi 0000:00:10.0: PCI INT A -> GSI 17 (level, low) -> IRQ 17
+mptbase: ioc0: Initiating bringup
+ioc0: LSI53C1030 B0: Capabilities={Initiator}
+scsi2 : ioc0: LSI53C1030 B0, FwRev=01032920h, Ports=1, MaxQ=128, IRQ=17
+scsi 2:0:0:0: Direct-Access     VMware,  VMware Virtual S 1.0  PQ: 0 ANSI: 2
+scsi target2:0:0: Beginning Domain Validation
+scsi target2:0:0: Domain Validation skipping write tests
+scsi target2:0:0: Ending Domain Validation
+scsi target2:0:0: FAST-40 WIDE SCSI 80.0 MB/s ST (25 ns, offset 127)
+sr0: scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+Uniform CD-ROM driver Revision: 3.20
+sr 0:0:0:0: Attached scsi CD-ROM sr0
+sr1: scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+sr 1:0:0:0: Attached scsi CD-ROM sr1
+sd 2:0:0:0: [sda] 41943040 512-byte logical blocks: (21.4 GB/20.0 GiB)
+sd 2:0:0:0: [sda] Write Protect is off
+sd 2:0:0:0: [sda] Mode Sense: 61 00 00 00
+sd 2:0:0:0: [sda] Cache data unavailable
+sd 2:0:0:0: [sda] Assuming drive cache: write through
+sd 2:0:0:0: [sda] Cache data unavailable
+sd 2:0:0:0: [sda] Assuming drive cache: write through
+ sda: sda1 sda2 sda3
+sd 2:0:0:0: [sda] Cache data unavailable
+sd 2:0:0:0: [sda] Assuming drive cache: write through
+sd 2:0:0:0: [sda] Attached SCSI disk
+usb 2-1: New USB device found, idVendor=0e0f, idProduct=0003
+usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 2-1: Product: VMware Virtual USB Mouse
+usb 2-1: Manufacturer: VMware
+usb 2-1: configuration #1 chosen from 1 choice
+input: VMware VMware Virtual USB Mouse as /devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb2/2-1/2-1:1.0/input/input4
+generic-usb 0003:0E0F:0003.0001: input,hidraw0: USB HID v
