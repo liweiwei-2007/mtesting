@@ -1,3 +1,4 @@
+caichang
 reen Target Display device initialized
 [drm] width 1280
 [drm] height 768
