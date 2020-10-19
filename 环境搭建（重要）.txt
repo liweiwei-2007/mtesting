@@ -1,0 +1,101 @@
+linux的环境部署：
+	3种安装方式
+		rpm、yum、源码
+
+
+1、最简单
+rpm安装
+	1、jdk---jvm、jre
+	2、安装
+		rpm -ivh rpm包名
+	3、rpm有个非常痛苦的问题，他有包依赖
+		mysql数据库
+			service mysqld start
+			mysql
+			exit;
+
+
+2、yum（在线安装）
+	1、理解什么叫源（重点）
+	2、yum命令的学习，顺带就讲解以后你上班如何学习一个命令
+		Usage: yum [options] COMMAND
+			yum -y install php
+	3、如果你有兴趣，私下慢慢学习源切换或yum的各种技巧（自学，不懂就问）
+	4、安装php和subversion
+	5、yum安装的是基于rpm的包，自动安装依赖关系
+
+
+
+3、源码安装
+	1、理解什么叫源码
+	2、安装过程
+		1、获得源码（.tar.gz）
+		2、解压开源码后运行对应的shell脚本(./configure)
+		3、编译(make)
+		4、运行(make install)
+	3、安装上nginx
+		1、cd /usr/local
+		2、mkdir nginx
+		3、cd nginx
+		4、wget https://nginx.org/download/nginx-1.9.9.tar.gz
+		5、tar zxvf nginx-1.9.9.tar.gz
+		6、cd cd nginx-1.9.9
+		7、yum -y install gcc gcc-c++ autoconf automake
+		8、yum -y install zlib zlib-devel openssl openssl-devel pcre pcre-devel
+		9、./configure --prefix=/usr/local/nginx/ --with-http_ssl_module
+		10、make
+		11、make install
+		上述11步仅仅是把nginx安装好
+		测试：
+			1、cd /usr/local/nginx/sbin
+			2、./nginx
+			3、service iptables siop
+			4、打开浏览器，输入linux的ip地址：http://192.168.176.128，就可以看到nginx的欢迎页
+
+
+
+
+
+
+
+recruit.students：java+mysql+tomcat（web）
+1、java
+2、tomcat
+	1、把tomcat的包拷贝到/tmp
+	2、cd /tmp
+	3、tar zxvf apache-tomcat-8.5.13.tar.gz
+	4、cp -r apache-tomcat-8.5.13 /usr/java/
+	5、cd  /usr/java/apache-tomcat-8.5.13/bin
+	6、 ./startup.sh
+	7、在浏览器中输入http://linux的ip:8080  (tomcat的端口默认是8080)
+3、把war包仍到tomcat的对应目录就可以访问这个项目了
+	/usr/java/apache-tomcat-8.5.13/webapps
+4、安装mysql
+5、把开发给的sql文件导入到mysql中
+	1、我们开启mysql的远程访问，让我能够通过windows就能访问linux中的mysql
+		1、mysql
+		2、use mysql;
+		3、update user set host='%' where user='root' and host='localhost';
+		4、FLUSH PRIVILEGES;
+	2、通过navicat连接mysql数据库
+	3、新建一个数据库，编码用utf8编码
+	4、右键----运行sql文件----选择开发给的sql文件，点击确定（最后你会开发successfully的提示）
+	5、右键----刷新
+		
+6、把代码中的数据库连接换成自己的数据库
+	1、vi /usr/java/apache-tomcat-8.5.13/webapps/recruit.students/WEB-INF/classes/datasource.properties
+	2、替换对应的ip、端口、数据库名、用户名、密码等信息，保存退出
+	3、重启tomcat（java这个语言规定了只要是修改配置文件就一定要重启服务器）
+	4、用admin/test123来登录就可以看到项目主页了
+
+
+
+
+
+
+
+
+
+
+
+
